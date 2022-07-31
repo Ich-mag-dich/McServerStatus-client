@@ -68,12 +68,12 @@ export default function ServerSideInfoLayout(props: ServerInfoLayoutProps) {
         </div>
       </div>
       <p style={{marginLeft:"10px", fontSize: "23px", marginBottom: "10px"}}>Player List :</p>
-      <div>
+      <div style={{marginLeft:"30px"}}>
         {props.data.players.playerList == null && <p>何もなかった</p>}
         {props.data.players.playerList?.map((x, i) => {
           if (x == " " || x == "" || x == null || x== undefined) return <p>何もなかった</p>;
           return (
-            <p style={{marginLeft:"30px"}} key={i} className={styles.playerName} onClick={() => {}}>
+            <p style={{marginLeft:"5px"}} key={i} className={styles.playerName} onClick={() => {}}>
               {x}
             </p>
           );
